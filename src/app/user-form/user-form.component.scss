@@ -1,0 +1,69 @@
+.cont-form {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    margin: 40px;
+
+    h1 {
+        font-family: 'Bebas Neue', cursive;
+    }
+
+    form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+        gap: 18px 40px;
+        flex-basis: 400px;
+
+        .item-form {
+            flex:30%;
+            min-width: 200px;
+
+            mat-form-field {
+                width: auto;
+                display: block;
+            }
+            
+            p {
+                color:red;
+            }
+        }
+    }
+
+    button {
+        display: block;
+        float: right;
+    }
+
+    .modal-info-user {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.486);
+        position: fixed;
+        top: 0;
+        z-index: 99999;
+        left: 0;
+
+        .content{
+            width: 400px;
+            height: auto;
+            overflow: hidden;
+            min-height: 200px;
+            position: relative;
+            margin: 0 auto;
+            background: #fff;
+            top: 17%;
+            border-radius: 7px;
+            padding: 20px;
+
+            .close-modal{
+                position: absolute;
+                top: 8px;
+                right: 16px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
