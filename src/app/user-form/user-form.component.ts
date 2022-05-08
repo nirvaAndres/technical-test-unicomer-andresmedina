@@ -10,7 +10,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class UserFormComponent implements OnInit {
 
   // Set vars
-  public infoUser:any;
   public openModal:boolean;
 
   // Set FormBuilder
@@ -29,11 +28,22 @@ export class UserFormComponent implements OnInit {
     incomes : ['', Validators.required]
   });
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    var pro = false;
+    this.prueba(pro);
+  }
 
   //Open modal
   showDataUser = () => this.openModal = true;
   // Close modal
   closeModal = () =>  this.openModal = false;
+
+  prueba(info){
+    if(info){
+      console.log('si');
+    } else {
+      console.log("no");
+    }
+  }
 
 }
