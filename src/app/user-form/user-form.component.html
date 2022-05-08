@@ -8,9 +8,11 @@
                 </mat-label>
                 <input matInput  type="text" formControlName="firstname" name="firstname" maxlength="20">
             </mat-form-field>
-            <p *ngIf="userForm.get('firstname').hasError('required') && userForm.get('firstname').touched">This input is required </p>
-            <p *ngIf="userForm.get('firstname').hasError('minlength') && userForm.get('firstname').touched"> Min length of 3 characters </p>
-            <p *ngIf="userForm.get('firstname').hasError('pattern') && userForm.get('firstname').touched"> This input accept only letters without spaces</p>
+            <p>
+                <span *ngIf="userForm.get('firstname').hasError('required') && userForm.get('firstname').touched"> This input is required </span>
+                <span *ngIf="userForm.get('firstname').hasError('minlength') && userForm.get('firstname').touched"> Min length of 3 characters </span>
+                <span *ngIf="userForm.get('firstname').hasError('pattern') && userForm.get('firstname').touched"> This input accept only letters without spaces</span>
+            </p>
         </div>
         <div class="item-form">
             <mat-form-field >
@@ -19,9 +21,11 @@
                 </mat-label>
                 <input matInput  type="text" formControlName="lastname" name="lastname">
             </mat-form-field>
-            <p *ngIf="userForm.get('lastname').hasError('required') && userForm.get('lastname').touched">This input is required</p>
-            <p *ngIf="userForm.get('lastname').hasError('minlength') && userForm.get('lastname').touched"> Min length of 3 characters </p>
-            <p *ngIf="userForm.get('lastname').hasError('pattern') && userForm.get('lastname').touched"> This input accept only letters without spaces </p>
+            <p>
+                <span *ngIf="userForm.get('lastname').hasError('required') && userForm.get('lastname').touched"> This input is required </span>
+                <span *ngIf="userForm.get('lastname').hasError('minlength') && userForm.get('lastname').touched"> Min length of 3 characters </span>
+                <span *ngIf="userForm.get('lastname').hasError('pattern') && userForm.get('lastname').touched"> This input accept only letters without spaces</span>
+            </p>
         </div>
         <div class="item-form">
             <mat-form-field >
@@ -51,9 +55,11 @@
                 </mat-label>
                 <input matInput placeholder="+56XXXXXXXXX"  type="text" formControlName="cellphone" name="cellphone" maxlength="20">
             </mat-form-field>
-            <p *ngIf="userForm.get('cellphone').hasError('required') && userForm.get('cellphone').touched">This input is required</p>
-            <p *ngIf="userForm.get('cellphone').hasError('minlength') && userForm.get('cellphone').touched"> Min length of 8 characters </p>
-            <p *ngIf="userForm.get('cellphone').hasError('pattern') && userForm.get('cellphone').touched"> Format invalid Ej +56XXXXXXXXX</p>
+            <p>
+                <span *ngIf="userForm.get('cellphone').hasError('required') && userForm.get('cellphone').touched"> This input is required </span>
+                <span *ngIf="userForm.get('cellphone').hasError('minlength') && userForm.get('cellphone').touched"> Min length of 8 characters </span>
+                <span *ngIf="userForm.get('cellphone').hasError('pattern') && userForm.get('cellphone').touched"> Format invalid Ej +56XXXXXXXXX</span>
+            </p>
         </div>
         <div class="item-form">
             <mat-form-field >
@@ -62,9 +68,11 @@
                 </mat-label>
                 <input matInput  type="text" formControlName="homephone" name="homephone" maxlength="20">
             </mat-form-field>
-            <p *ngIf="userForm.get('homephone').hasError('required') && userForm.get('homephone').touched">This input is required</p>
-            <p *ngIf="userForm.get('homephone').hasError('minlength') && userForm.get('homephone').touched"> Min length of 8 characters </p>
-            <p *ngIf="userForm.get('homephone').hasError('pattern') && userForm.get('homephone').touched"> Format invalid </p>
+            <p>
+                <span *ngIf="userForm.get('homephone').hasError('required') && userForm.get('homephone').touched"> This input is required </span>
+                <span *ngIf="userForm.get('homephone').hasError('minlength') && userForm.get('homephone').touched"> Min length of 8 characters </span>
+                <span *ngIf="userForm.get('homephone').hasError('pattern') && userForm.get('homephone').touched"> Format invalid </span>
+            </p>
         </div>
         <div class="item-form">
             <mat-form-field>
@@ -73,8 +81,10 @@
                 </mat-label>
                 <input matInput  type="text" formControlName="address" name="address" maxlength="200">
             </mat-form-field>
-            <p *ngIf="userForm.get('address').hasError('minlength') && userForm.get('address').touched"> Min length of 5 characters </p>
-            <p *ngIf="userForm.get('address').hasError('required') && userForm.get('address').touched">This input is required</p>
+            <p>
+                <span *ngIf="userForm.get('address').hasError('required') && userForm.get('address').touched"> This input is required </span>
+                <span *ngIf="userForm.get('address').hasError('minlength') && userForm.get('address').touched"> Min length of 5 characters </span>
+            </p>
         </div>
         <div class="item-form">
             <mat-form-field >
@@ -83,51 +93,22 @@
                 </mat-label>
                 <input matInput  type="text" formControlName="profession" name="profession" maxlength="50">
             </mat-form-field>
-            <p *ngIf="userForm.get('profession').hasError('minlength') && userForm.get('profession').touched"> Min length of 5 characters </p>
-            <p *ngIf="userForm.get('profession').hasError('required') && userForm.get('profession').touched">This input is required</p>
+            <p>
+                <span *ngIf="userForm.get('profession').hasError('required') && userForm.get('profession').touched"> This input is required </span>
+                <span *ngIf="userForm.get('profession').hasError('minlength') && userForm.get('profession').touched"> Min length of 5 characters </span>
+            </p>
         </div>
         <div class="item-form">
             <mat-form-field>
                 <mat-label>
-                    Incomes(*):
+                    Incomes(*) $USD:
                 </mat-label>
                 <input matInput  type="number" formControlName="incomes" name="incomes" maxlength="15">
             </mat-form-field>
             <p *ngIf="userForm.get('incomes').hasError('required') && userForm.get('incomes').touched">This input is required</p>
         </div>
     </form>
-    <div class="modal-info-user" *ngIf="openModal"> 
-        <div class="content">
-            <div class="close-modal" (click)="closeModal()" >X</div>
-            <div class="items-info">
-                Firstname : {{ userForm.value.firstname }}
-            </div>
-            <div class="items-info">
-                Lastname :{{ userForm.value.lastname }}
-            </div>
-            <div class="items-info">
-                Birthday : {{ userForm.value.birthday }}
-            </div>
-            <div class="items-info">
-                Gender : {{ userForm.value.gender }}
-            </div>
-            <div class="items-info">
-                Cellphone : {{ userForm.value.cellphone }}
-            </div>
-            <div class="items-info">
-                Homephone : {{ userForm.value.homephone }}
-            </div>
-            <div class="items-info">
-                Address : {{ userForm.value.address }}
-            </div>
-            <div class="items-info">
-                Profession : {{ userForm.value.profession }}
-            </div>
-            <div class="items-info">
-                Incomes : {{ userForm.value.incomes }}
-            </div>
-        </div>
-    </div>
+    <modal-info [statusOpen]="openModal" [infoData]="infoUser" (closeModal)="closeModal()"></modal-info>
     <button mat-raised-button color="primary" (click)="showDataUser()"  [disabled]="!userForm.valid"> Show data user </button>
 </mat-card>
 

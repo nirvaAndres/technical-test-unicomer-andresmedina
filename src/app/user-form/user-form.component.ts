@@ -11,6 +11,7 @@ export class UserFormComponent implements OnInit {
 
   // Set vars
   public openModal:boolean;
+  public infoUser:FormGroup;
 
   // Set FormBuilder
   constructor(private fb:FormBuilder){}
@@ -28,22 +29,15 @@ export class UserFormComponent implements OnInit {
     incomes : ['', Validators.required]
   });
 
-  ngOnInit(): void {
-    var pro = false;
-    this.prueba(pro);
-  }
+  ngOnInit(): void {}
 
   //Open modal
-  showDataUser = () => this.openModal = true;
-  // Close modal
-  closeModal = () =>  this.openModal = false;
+  showDataUser = () => { 
+    this.infoUser = this.userForm.value;
+    this.openModal = true;
+  };
 
-  prueba(info){
-    if(info){
-      console.log('si');
-    } else {
-      console.log("no");
-    }
-  }
+  // Close modal
+  closeModal = () => this.openModal = false;
 
 }

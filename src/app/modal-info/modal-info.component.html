@@ -1,0 +1,32 @@
+<div class="modal-info-user" *ngIf="openStatus"> 
+    <div class="content">
+        <div class="close-modal" (click)="close()"> X </div>
+        <div class="items-info">
+            Firstname : {{ infoUser.firstname }}
+        </div>
+        <div class="items-info">
+            Lastname :{{ infoUser.lastname }}
+        </div>
+        <div class="items-info">
+            Birthday : {{ infoUser.birthday }}
+        </div>
+        <div class="items-info">
+            Gender : {{ infoUser.gender }}
+        </div>
+        <div class="items-info">
+            Cellphone : {{ infoUser.cellphone }}
+        </div>
+        <div class="items-info">
+            Homephone : {{ infoUser.homephone }}
+        </div>
+        <div class="items-info">
+            Address : {{ infoUser.address }}
+        </div>
+        <div class="items-info">
+            Profession : {{ infoUser.profession }}
+        </div>
+        <div class="items-info">
+            Incomes : {{ infoUser.incomes | currency:'USD' }}
+        </div>
+    </div>
+</div>
